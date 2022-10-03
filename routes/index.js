@@ -15,10 +15,7 @@ router.get('/home', function(req, res, next) {
 /* GET About page. */
 router.get('/about', function(req, res, next) {
   res.render('index', { title: 'About'});
-  <body>
-  Hi My name is Yin-Siang Mao
-  Currently a student of Software Engineering Technology - AI
-  </body>
+  
 });
 
 /* GET Products page. */
