@@ -1,0 +1,20 @@
+<%- include partials/header.ejs %>
+
+
+<%- include partials/main_nav.ejs %>
+
+
+<!--Main Content-->
+<div class="container bg-light">
+  <div class="jumbotron">
+  <h1 class="display-6">Welcome to the <%= title %> page</h1>
+  
+</div>
+</div>
+
+<h1>how to insert content for differnect page in VS code</h1>
+
+<%- include partials/bottom_nav.ejs %>
+
+
+<%- include partials/footer.ejs %>
