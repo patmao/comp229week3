@@ -135,7 +135,44 @@
     }
 
     
-   
+    function handlecheckbox() {
+        var checkbox = document.getElementById("samecheck");
+        
+        var fname = document.getElementById("fname");
+        var lname = document.getElementById("lname");
+        var saddress = document.getElementById("saddress");
+        var city = document.getElementById("city");
+        var state = document.getElementById("state");
+        var zip = document.getElementById("zip");
+        var phone = document.getElementById("phone");
+
+        var fname1 = document.getElementById("fname1");
+        var lname1 = document.getElementById("lname1");
+        var saddress1 = document.getElementById("saddress1");
+        var city1 = document.getElementById("city1");
+        var state1 = document.getElementById("state1");
+        var zip1 = document.getElementById("zip1");
+        var phone1 = document.getElementById("phone1");
+
+        
+        if (checkbox.checked == true) {
+            fname1.value = fname.value;
+            lname1.value = lname.value;
+            saddress1.value = saddress.value;
+            city1.value = city.value;
+            state1.value = state.value;
+            zip1.value = zip.value;
+            phone1.value = phone.value;
+        } else {
+            fname1.value = "";
+            lname1.value = "";
+            saddress1.value = "";
+            city1.value = "";
+            state1.value = "";
+            zip1.value = "";
+            phone1.value = "";
+        }
+    }
 </script>
 </html>
 <%- include partials/bottom_nav.ejs %>
