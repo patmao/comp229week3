@@ -35,65 +35,55 @@
         display: inline-block;
     }
 </style>
+
+
 <body>
-    <form class="myform" align="center">
-        <h3><i>Personal infomation</i></h3>
-        <label for="fname"><i>First name:</i></label>
-        <input type="text" id="fname" name="fname" required /><br />
-        <label for="lname"><i>Last name:</i></label>
-        <input type="text" id="lname" name="lname" required /><br />
-        <label for="saddress"><i>Street Address:</i></label>
-        <input type="text" id="saddress" name="saddress" required /><br />
-        <label for="city"><i>City:</i></label>
-        <input type="text" id="city" name="city" required /><br />
-        <label for="state"><i>State:</i></label>
-        <select name="state" id="state" required>
-            <option value="Sample1">New York</option>
-            <option value="Sample2">California</option>
-            <option value="Sample3">Texas</option>
-            <option value="Sample4">Arizona</option>
-            <option value="Sample5">Utah</option>
-            <option value="Sample6">Gerogia</option>
-            <option value="Sample7">Washington</option>
-            <option value="Sample8">Others</option>
-        </select>
-        <br />
-        <label for="zip"><i>Zip:</i></label>
-        <input type="number" id="zip" name="zip" required /><br />
-        <label for="phone"><i>Phone:</i></label>
-        <input type="text" id="phone" name="phone" required /><br />
-    </form>
-    <br />
-
-    
-
-<script>
-    function checkvalid() {
-        
-        var fname = document.getElementById("fname");
-        var lname = document.getElementById("lname");
-        var saddress = document.getElementById("saddress");
-        var city = document.getElementById("city");
-        var state = document.getElementById("state");
-        var zip = document.getElementById("zip");
-        var phone = document.getElementById("phone");
-
-  
-        
-        if (!fname.checkValidity()) {
-            fname.setCustomValidity("First Name cannot be left empty space.");
-            fname.reportValidity();
-        } else if (!lname.checkValidity()) {
-            fname.setCustomValidity(" Last Name cannot be left empty space.");
-            fname.reportValidity();
-        } else if (!zip.checkValidity()) {
-            zip.setCustomValidity("Zip code has to be number");
-            zip.reportValidity();
-        }
-    }
-
-    
-</script>
+    <body onload="document.registration.fname.focus();">
+        <h1 align="center" color="gold">Member Registration</h1>
+        <p align="center">Please complete the all fields below:</p>
+        <form name='registration'>
+            
+            <div align="center">
+                <ul>
+                    <li><label for="userid">First name:<sup style="color:#F00">*</sup> </label></li>
+                    <li><input type="text" name="fname" size="27" /></li>
+                    <li><label for="passid">Last name:<sup style="color:#F00">*</sup> </label></li>
+                    <li><input type="text" name="lname" size="27" /></li>
+                    <li><label for="address">Address:<sup style="color:#F00">*</sup> </label></li>
+                    <li><input type="text" name="address" size="27" /></li>
+                    <li><label for="userid">City:<sup style="color:#F00">*</sup> </label></li>
+                    <li><input type="text" name="city" size="27" /></li>
+                    <li><label for="passid">Postal Code:<sup style="color:#F00">*</sup> </label></li>
+                    <li><input type="text" name="postalcode" size="27" /></li>
+                    <li><label for="userid">Provience:<sup style="color:#F00">*</sup> </label></li>
+                    
+                    <li>
+                        <select name="provience">
+                            <option selected="" value="Default">(Please select a Provience)</option>
+                            <option value="QC">QC</option>
+                            <option value="ON">ON</option>
+                            <option value="MN">MN</option>
+                            <option value="SK">SK</option>
+                            <option value="AB">AB</option>
+                            <option value="BC">BC</option>
+                        </select>
+                    </li>
+                    <li><label for="passid">Age:<sup style="color:#F00">*</sup> </label></li>
+                    <li><input type="text" name="age" size="26" /></li>
+                    <li><label for="userid">Password:<sup style="color:#F00">*</sup> </label></li>
+                    <li><input type="Password" name="passid" size="26" /></li>
+                    <li><label for="passid">Confirm:<sup style="color:#F00">*</sup> </label></li>
+                    <li><input type="Password" name="confirm" size="26" /></li>
+                    <li><label for="email">Email:<sup style="color:#F00">*</sup> </label></li>
+                    <li><input type="text" name="email" size="26" /></li>
+                    </br>
+                    <li><input type="submit" name="submit" value="Register Now" onClick="return formValidation();" /></li>
+                    </br>
+                    <li><input type="reset" name="reset" value="Clear Form" onClick="return confirmreset()" /></li>
+                </ul>
+            </div>
+        </form><br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>   
+    </body>
 </html>
 <%- include partials/bottom_nav.ejs %>
 
