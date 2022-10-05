@@ -5,6 +5,7 @@
 
 <!DOCTYPE html>
 <html>
+ <body style="color: gold; background-color:black;">
     <div align="center" class="container bg-light">
         <div class="jumbotron">
         <h2>Contact me: </h2>
@@ -13,32 +14,11 @@
     </div>
     </div>
 
-<style>
-    .myform {
-        border: 24px green;
-        background-color: floralwhite;
-        padding: 20px;
-    }
-    
-    input:valid {
-        width: 30px;
-        margin: 3px;
-        display: inline-block;
-    }
-
-    
-    input:invalid {
-        background: pink;
-        border: 2px solid black;
-        width: 30%;
-        margin: 1px;
-        display: inline-block;
-    }
-</style>
 
 
-<body>
-    <body onload="document.registration.fname.focus();">
+
+   <body>
+       <body onload="document.registration.fname.focus();">
         <div style="margin-left:180px; margin-right:180px; padding:5px;background-color:grey; ">
         <h1 align="center" color="gold">Contact form</h1>
         <p align="center">Please complete the all fields below:</p>
@@ -84,6 +64,7 @@
                     
             </div>
         </form><br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>   
+    </body>
     </body>
 </html>
 <%- include partials/bottom_nav.ejs %>
